@@ -1,8 +1,11 @@
 name: Godlike URL 续期
 
 on:
-  schedule:
-    - cron: '23 * * * *'
+  # schedule:
+  #   - cron: '23 * * * *'
+  # 配置外部事件监听
+  repository_dispatch:
+    types: [Godlike_URL_Renew] # 这里的名字可以自定义，相当于暗号
   workflow_dispatch:
     inputs:
       accounts:
