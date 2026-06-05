@@ -1,7 +1,9 @@
 name: Godlike 续期
 on:
-  schedule:
-    - cron: '0 */3 * * *'
+  # schedule:
+  #   - cron: '0 */3 * * *'
+  repository_dispatch:
+    types: [Godlike_URL_Renew] # 这里的名字可以自定义，相当于暗号
   workflow_dispatch:
 
 jobs:
