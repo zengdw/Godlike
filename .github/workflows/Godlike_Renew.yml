@@ -11,6 +11,9 @@ jobs:
     name: 运行续期脚本
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      actions: write   # 允许删除 workflow runs
+      contents: read
 
     steps:
       - name: 拉取仓库
